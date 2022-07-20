@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="bt-3"> Detailed Information </h1>
+    <div class="detailed_bg">
+        <p class='detailedInfo'>
+            {% set userPic = user.profile_pic %}
+            <img src="{{ url_for('static', filename = 'profile_pics/' + userPic) }}"class = 'childPFP'>
+            <p class='detailedInfo' style='font-size: 30px' ><b>{{user.name}}</b></p>
+            <hr>
+            <p class='detailedInfo'>Age: {{user.age}} years old</p>
+            <hr>
+            <p class='detailedInfo'>Gender: {{user.gender}}</p>
+            <hr>
+
+            <p class='detailedInfo'>Date Entered Into the System: {{user.date_entered.strftime('%B %d, %Y')}}</p>
+            <hr>
+            <p class='detailedInfo'>Interests:
+            {% for interest in user.interests %}
+                {{interest}}, 
+            {% endfor %}
+            </p>
+            <hr>
+            <p class='detailedInfo'>Hobbies:
+            {% for hobby in user.hobbies %}
+                {{hobby}},
+            {% endfor %}
+            </p>
+            <hr>
+            <!-- Admin Update and Delete -->
+            {% if current_user.is_authenticated and current_user.role == 'Admin' %}
+                <a href='/user/{{user.role}}/{{user.username}}/update'>
+                    <button class='updateButton'>Update</button>
+                </a>
+                <form action="{{ url_for('deleteUser', role=user.role, username=user.username) }}" method="POST">
+                    <input class='deleteButton' value='Delete' type='submit'>
+                </form>
+            {% endif %}
+        </p>
+        <br>
+        <br>
+        <br>
+    </div>
+{% endblock content %}

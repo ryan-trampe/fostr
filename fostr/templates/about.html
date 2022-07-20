@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<img src="{{ url_for('static', filename = 'foster_logo.png')}}" alt="Logo" class="aboutLogo">
+<br><br>
+<p class="aboutWords"> 
+    Fostr came to life in the winter term of 2021. A small group of computer engineering students,
+    Tyler Kieluk, Ryan Trampe, and Harrison Hope, set out on a mission to bring foster families online.
+    <br><br>
+    Fostr is designed around having two main user types, an administrator and possible foster parents. Also having children in the data base.
+    <br>
+    The administrator role is able to add both children and foster parents to the data base. This user is hidden from the other members of the data base.
+    <br>
+    The parent role has the ability to see the children that are currently looking for a foster family within the data base. The parent cannot add any users to the data base. 
+    <br>
+    Within the data base children are added to be able to be seen by potential foster families (parent users). On the home screen, parent users are able to see the names of the children, 
+    along with their gender and age. Clicking on the name of the child will route the user to a page that displays all of the information about the child. 
+    <br><br>
+    Fostr was designed to be used both on mobile and on desktop, with adaptive images and an adaptive navigation bar creating a user friendly interface.
+</p>
+{% endblock content %}

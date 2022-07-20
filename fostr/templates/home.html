@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <br>
+    <h4 class="pb-2 mb-0" style="text-align:center"><b>Welcome to Fostr!</b></h4> 
+    <p  style="text-align:center"> <b><i> Let us help you find your Fitting Family!</i></b></p> 
+    {% for user in users %}
+    <table class = 'childHomeInformation'>    
+        <tr>
+            <td class= 'userPictureHome' width= '150' height= '150' rowspan="4" > 
+                <a href="/user/{{user.role}}/{{user.username}}">             
+                    {% set userPic = user.profile_pic %}
+                    <img src="{{ url_for('static', filename = 'profile_pics/' + userPic) }}" alt= "This is the image of the child" class= 'childPFP' > 
+                    </img>
+                </a>  
+            </td>
+            <td><a class = 'homeChildName' href="/user/{{user.role}}/{{user.username}}">{{user.name}}</a>
+            </td>
+        </tr>
+        <tr>
+            <td class = 'homeChildAge'>{{user.role}}
+            </td>
+        </tr>
+        <tr>
+            <td class = 'homeChildAge'>{{user.age}} years old
+            </td>
+        </tr>
+        <tr>
+            <td class = 'homeChildGender'>{{user.gender}} 
+            </td>
+        </tr>   
+    </table>
+    <br>
+    {% endfor %}
+{% endblock content %}
+

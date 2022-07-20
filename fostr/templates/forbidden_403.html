@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 style='text-align:center'>ERROR 403: Forbidden</h2>
+<p style='text-align:center'> You do not have access to this page</p>
+
+<img src="{{ url_for('static', filename = 'e403.png')}}" alt="error" class="e403">
+<p style='text-align:center'> No home for you lol, get rekt XD</p>
+
+{% endblock content %}

@@ -1,0 +1,6 @@
+What still to do:
+fix / redirect thing
+create detasiled children page logic + html file (has route stub)
+home db query
+admin drop table, and hiding admin stuff in navbar
+create user logic/form (form class form page nd create user route)

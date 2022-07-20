@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Admin Page</h2>
+
+<form method="post" action="" enctype="multipart/form-data">
+    <legend>Username</legend>
+    <!-- username -->
+    <div class="form-group">
+        {{ form.username.label(class="form-control-label") }}
+            {% if form.username.errors %}
+                {{ form.username(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.username.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.username(vlass="form-control form-control-leg") }}
+            {% endif %}
+    </div>
+
+    <!-- password -->
+    <div class="form-group">
+        {{ form.password.label(class="form-control-label") }}
+            {% if form.password.errors %}
+                {{ form.password(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.password.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.password(vlass="form-control form-control-leg") }}
+            {% endif %}
+    </div>
+
+    <!-- role -->
+    <div class="form-group">
+        {{ form.role.label(class="form-control-label") }}
+            {% if form.role.errors %}
+                {{ form.role(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.role.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.role(vlass="form-control form-control-leg") }}
+            {% endif %}
+    </div>
+
+    <!-- name -->
+    <div class="form-group">
+        {{ form.name.label(class="form-control-label") }}
+            {% if form.name.errors %}
+                {{ form.name(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.name.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.name(vlass="form-control form-control-leg") }}
+            {% endif %}
+    </div>
+
+    <!-- age -->
+    <div class="form-group">
+        {{ form.age.label(class="form-control-label") }}
+            {% if form.age.errors %}
+                {{ form.age(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.age.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.age(vlass="form-control form-control-leg") }}
+            {% endif %}
+    </div>
+
+    <!-- gender -->
+    <div class="form-group">
+        {{ form.gender.label(class="form-control-label") }}
+            {% if form.gender.errors %}
+                {{ form.gender(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.gender.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.gender(vlass="form-control form-control-leg") }}
+            {% endif %}
+    </div>
+
+    <!-- interests -->
+    <div class="form-group">
+        {{ form.interests.label(class="form-control-label") }}
+            {% if form.interests.errors %}
+                {{ form.interests(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.interests.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.interests(vlass="form-control form-control-leg") }}
+            {% endif %}
+    </div>
+
+    <!-- hobbies -->
+    <div class="form-group">
+        {{ form.hobbies.label(class="form-control-label") }}
+            {% if form.hobbies.errors %}
+                {{ form.hobbies(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.hobbies.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.hobbies(vlass="form-control form-control-leg") }}
+            {% endif %}
+    </div>
+
+    <!-- date_entered -->
+    <div class="form-group">
+        {{ form.date_entered.label(class="form-control-label") }}
+            {% if form.date_entered.errors %}
+                {{ form.date_entered(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.date_entered.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}
+                {{ form.date_entered(vlass="form-control form-control-leg") }}
+            {% endif %}
+    </div>
+
+    <!-- Picture -->
+    <div class="form-group">
+        {{ form.picture.label() }}
+        {{ form.picture(class="form-control-file") }}
+        {% if form.picture.errors %}
+            {% for error in form.picture.errors %}
+                <span class="text-danger">{{ error }}</span><br>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="form-group">
+        {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+
+</form>
+
+{% endblock content %}

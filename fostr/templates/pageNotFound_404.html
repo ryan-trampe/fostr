@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 style='text-align:center'>ERROR 404: Page Not Found</h2>
+<p style='text-align:center'> Neither is your family! :)</p>
+<br><br>
+<img src="{{ url_for('static', filename = 'p404.png')}}" alt="e404" class="e404">
+<br><br>
+
+{% endblock content %}

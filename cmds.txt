@@ -1,0 +1,10 @@
+
+// secret key
+from secrets import token_hex
+token_hex(16)
+
+// get requirements for project saved as requirements.txt
+pip3 install pipreqs
+pipreqs .
+
+pip3 install -r requirements.txt

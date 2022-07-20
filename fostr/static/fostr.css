@@ -1,0 +1,294 @@
+/* =-=-=-=-=-=- Base level- Navbar =-=-=-=-=-=-*/
+/* Add background color to the top navigation */
+.navBar {
+    background-color: #2c343f;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.navBar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navBar a:hover {
+    background-color: #00000044;
+    color: white;
+}
+
+.navBar a.active {
+    background-color: #2f05c5d7;
+    color: white;
+}
+/* Hide the link that should open and close the navBar on small screens */
+.navBar .icon {
+    display: none;
+}
+
+.navBar .logoutButton { 
+    float: right;
+}
+
+/* admin drop down */
+.dropAdmin {
+    float: left;
+    overflow: hidden;
+
+}
+
+.dropAdmin .dropBtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0; 
+
+}
+
+.dropAdminContents {
+    display: none;
+    position: absolute;
+    background-color: #2c343f;
+    color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+/* Links inside the dropdown */
+.dropAdminContents a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+.dropAdmin:hover .dropAdminContents {
+    display: block;
+}
+
+.sidenav {
+    display: none;
+}
+
+.sidenav-container {
+    display: none;
+}
+
+.dropdown-sidenav {
+    display: none;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Create mobile/ smalled screen dynamic changes */
+@media screen and (max-width: 600px) {
+    .navBar a:not(:first-child), button.dropBtn {
+            display: none; 
+        }
+
+    .navBar a:first-child {
+        width: 100%;
+    }
+    .navBar a.icon {
+        display: block;
+    }
+    .sidenav, .dropdown-sidenav{
+        display: block;
+    }
+
+    }
+      
+@media screen and (max-width: 600px) {
+ 
+.dropdown-sidenav {
+    color: white;
+}
+
+    .sidenav, .dropdown-sidenav {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #2c343f;
+        overflow-x: hidden;
+    }
+    .sidenav-content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+      }
+    /* Style the sidenav links and the dropdown button */
+    .sidenav a, .dropdown-btn {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        color: #ffffff;
+        display: block;
+        border: none;
+        background: none;
+        width:100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+    }
+    
+    /* On mouse-over */
+    .sidenav a:hover, .dropdown-btn:hover {
+        background: #00000044;
+        color: #f1f1f1;
+    }
+    
+    /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+    .dropdown-container {
+        display: none;
+        background-color: #2c343f;
+        font-size: 17px;
+        padding-left: 8px;
+    }
+    
+    /* Optional: Style the caret down icon */
+    .fa-caret-down {
+        float: right;
+        padding-right: 8px;
+    }
+
+
+}
+
+
+
+/* =-=-=-=-=-=- About Section =-=-=-=-=-=-*/
+.aboutLogo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.aboutWords { 
+    font-size: 25px;
+    text-align: left; 
+}
+/* =-=-=-=-=-=- Error Screens =-=-=-=-=-=- */
+.e404 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.e403 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+/* =-=-=-=-=-=- Background Colour =-=-=-=-=-=- */
+body { 
+    background-color: rgba(113, 142, 204, 0.486)  ;
+}
+
+
+/* TESTING */
+.childPFP {
+    max-width: 125px;
+    min-width: 125px;
+    max-height: 125px;
+    min-height: 125px;
+    border-radius: 50%;
+
+}
+.childPFPInfo {
+    max-width: 125px;
+    min-width: 125px;
+    max-height: 125px;
+    min-height: 125px;
+    border-radius: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.childHomeInformation, .detailedInfoDiv{
+    /* border: 5px solid #2f05c5d7; */
+    background-color: #2c343f;
+    border-collapse:separate;
+    /* border:solid black 10px; */
+    border-radius:75px;
+    -moz-border-radius:6px;
+
+}
+
+.childHomeInformation {
+    width: 100%;
+}
+
+.homeChildName, .detailedInfoName {
+    font-size: 30px;
+    width: 100%;
+    padding-left: 5%; 
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.userPictureHome {
+    padding-left: 17px;
+    align-items: center;    
+}
+
+.homeChildAge, .homeChildGender {
+    font-size: 20px;
+    width: 100%;
+    padding-right: 12%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.85);
+    
+}
+
+.detailed_bg{
+    color: white;
+    background-color: #2c343f;
+    border:solid black 2px;
+    border-radius:10px;
+    padding:10px
+    
+}
+
+.detailedInfo{
+    font-size: 17px;
+    text-align: center;
+}
+.detailedInfoName{
+    font-size: 30px;
+    text-align: center;
+}
+.updateButton, .deleteButton {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    float: left;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #008CBA;
+    border-radius: 25px;
+        
+}
